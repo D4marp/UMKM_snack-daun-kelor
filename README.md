@@ -28,7 +28,7 @@
 
 ## 🌐 Live Preview
 
-🔗 [View Live Site](https://your-live-site-link.com)  
+🔗 [View Live Site](https://fresh-feast-black.vercel.app/)  
 📷 Screenshot Preview below ↓
 
 ---
