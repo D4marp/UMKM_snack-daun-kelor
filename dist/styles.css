@@ -8,8 +8,6 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-orange-300: oklch(83.7% 0.128 66.29);
-    --color-green-100: oklch(96.2% 0.044 156.743);
-    --color-green-200: oklch(92.5% 0.084 155.995);
     --color-green-500: oklch(72.3% 0.219 149.579);
     --color-green-600: oklch(62.7% 0.194 149.214);
     --color-green-700: oklch(52.7% 0.154 150.069);
@@ -248,6 +246,15 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .-mt-\[0px\] {
+    margin-top: calc(0px * -1);
+  }
+  .-mt-\[1px\] {
+    margin-top: calc(1px * -1);
+  }
+  .-mt-\[2px\] {
+    margin-top: calc(2px * -1);
+  }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
@@ -411,23 +418,8 @@
   .scroll-mt-0 {
     scroll-margin-top: calc(var(--spacing) * 0);
   }
-  .scroll-mt-2 {
-    scroll-margin-top: calc(var(--spacing) * 2);
-  }
-  .scroll-mt-4 {
-    scroll-margin-top: calc(var(--spacing) * 4);
-  }
-  .scroll-mt-6 {
-    scroll-margin-top: calc(var(--spacing) * 6);
-  }
   .scroll-mt-8 {
     scroll-margin-top: calc(var(--spacing) * 8);
-  }
-  .scroll-mt-16 {
-    scroll-margin-top: calc(var(--spacing) * 16);
-  }
-  .scroll-mt-28 {
-    scroll-margin-top: calc(var(--spacing) * 28);
   }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -547,12 +539,6 @@
   }
   .bg-black {
     background-color: var(--color-black);
-  }
-  .bg-green-100 {
-    background-color: var(--color-green-100);
-  }
-  .bg-green-200 {
-    background-color: var(--color-green-200);
   }
   .bg-green-500 {
     background-color: var(--color-green-500);
@@ -736,9 +722,6 @@
   .text-gray-600 {
     color: var(--color-gray-600);
   }
-  .text-gray-700 {
-    color: var(--color-gray-700);
-  }
   .text-gray-800 {
     color: var(--color-gray-800);
   }
@@ -750,9 +733,6 @@
   }
   .text-green-600 {
     color: var(--color-green-600);
-  }
-  .text-green-700 {
-    color: var(--color-green-700);
   }
   .text-orange-300 {
     color: var(--color-orange-300);
@@ -806,13 +786,6 @@
       }
     }
   }
-  .hover\:bg-\[\#1b1817\] {
-    &:hover {
-      @media (hover: hover) {
-        background-color: #1b1817;
-      }
-    }
-  }
   .hover\:bg-\[\#178a2c\] {
     &:hover {
       @media (hover: hover) {
@@ -820,94 +793,10 @@
       }
     }
   }
-  .hover\:bg-\[\#875748\] {
-    &:hover {
-      @media (hover: hover) {
-        background-color: #875748;
-      }
-    }
-  }
-  .hover\:bg-\[\#a46451\] {
-    &:hover {
-      @media (hover: hover) {
-        background-color: #a46451;
-      }
-    }
-  }
-  .hover\:bg-\[\#ca8671\] {
-    &:hover {
-      @media (hover: hover) {
-        background-color: #ca8671;
-      }
-    }
-  }
-  .hover\:bg-\[\#cb907e\] {
-    &:hover {
-      @media (hover: hover) {
-        background-color: #cb907e;
-      }
-    }
-  }
-  .hover\:bg-\[\#d18d78\] {
-    &:hover {
-      @media (hover: hover) {
-        background-color: #d18d78;
-      }
-    }
-  }
-  .hover\:bg-\[\#d2826a\] {
-    &:hover {
-      @media (hover: hover) {
-        background-color: #d2826a;
-      }
-    }
-  }
-  .hover\:bg-\[\#d19481\] {
-    &:hover {
-      @media (hover: hover) {
-        background-color: #d19481;
-      }
-    }
-  }
-  .hover\:bg-\[\#e3a491\] {
-    &:hover {
-      @media (hover: hover) {
-        background-color: #e3a491;
-      }
-    }
-  }
   .hover\:bg-\[\#e69076\] {
     &:hover {
       @media (hover: hover) {
         background-color: #e69076;
-      }
-    }
-  }
-  .hover\:bg-\[\#f69a7e\] {
-    &:hover {
-      @media (hover: hover) {
-        background-color: #f69a7e;
-      }
-    }
-  }
-  .hover\:bg-\[\#f59274\] {
-    &:hover {
-      @media (hover: hover) {
-        background-color: #f59274;
-      }
-    }
-  }
-  .hover\:bg-\[\#f79678\] {
-    &:hover {
-      @media (hover: hover) {
-        background-color: #f79678;
-      }
-    }
-  }
-  .hover\:bg-\[\#ff784f\] {
-    &:hover {
-      @media (hover: hover) {
-        background-color: #ff784f;
       }
     }
   }
@@ -1233,11 +1122,6 @@
   .dark\:bg-gray-700 {
     &:where(.dark, .dark *) {
       background-color: var(--color-gray-700);
-    }
-  }
-  .dark\:bg-white {
-    &:where(.dark, .dark *) {
-      background-color: var(--color-white);
     }
   }
   .dark\:from-\[\#101d12\] {
