@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+<!-- Tambahkan di dalam head section, setelah link CSS -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,33 @@
     <meta name="description" content="Fresh Feast is a fast and healthy food delivery service landing page built with Tailwind CSS.">
     <link rel="stylesheet" href="dist/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
+    <!-- Google Translate CSS untuk styling -->
+    <style>
+        .goog-te-banner-frame.skiptranslate {
+            display: none !important;
+        }
+        body {
+            top: 0px !important;
+        }
+        .goog-te-gadget {
+            font-family: inherit !important;
+        }
+        .goog-te-gadget .goog-te-combo {
+            background: #178a2c;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        .goog-te-gadget .goog-te-combo:hover {
+            background: #146b22;
+        }
+        #google_translate_element {
+            display: inline-block;
+        }
+    </style>
 </head>
 <body class="bg-white dark:bg-[#101d12]">
   <!-- Navbar Start -->
@@ -31,10 +59,14 @@
 
       
 
+      <!-- Tambahkan Google Translate Widget di navbar, setelah Dark Mode Switch -->
       <!-- Dark Mode Switch -->
       <button id="darkToggle" class="w-10 h-5 bg-white dark:bg-gray-700 rounded-full relative items-center px-1 flex transition-colors duration-300 focus:outline-none">
         <div id="ball" class="w-4 h-4 bg-green-600 dark:bg-[#FF9900] rounded-full transition-transform duration-300"></div>
       </button>
+      
+      <!-- Google Translate Widget -->
+      <div id="google_translate_element" class="ml-4"></div>
     </div>
 
     <!-- Hamburger (Mobile) -->
@@ -72,10 +104,15 @@
       </nav>
 
       <!-- Dark Mode Toggle -->
+      <!-- Dark Mode Toggle -->
       <button id="mobileDarkToggle" class="mt-6 w-10 h-5 bg-white dark:bg-gray-700 rounded-full relative items-center px-1 flex focus:outline-none">
         <div id="mobileBall" class="w-4 h-4 bg-green-600 dark:bg-[#FF9900] rounded-full transition-transform duration-300"></div>
       </button>
-
+      
+      <!-- Mobile Google Translate Widget -->
+      <div class="mt-4">
+        <div id="mobile_google_translate_element"></div>
+      </div>
      
     </div>
   </div>
